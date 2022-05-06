@@ -16,6 +16,13 @@
 /* @import url(파일주소); */
 @import url(common.css);
 
+
+/*  서브페이지 메인 컨텐츠 박스 
+    common.css에서 한 걸 덮어쓰는 것*/
+main#cont{
+    /* 패딩변경 */
+    padding: 20px; /* p20 */
+}
 /************** 2-1. 언론사로고 **************/
 .prlogo img{
     height: 32px;
@@ -23,7 +30,64 @@
     비율에 맞게 자동변경된다! */
 }
 /************** 2-2. 기사제목 **************/
+.atit{
+    font-size : 30px;
+    /* 글자두께: font-weight */
+    font-weight: bold;
+    font-family: "맑은 고딕";
+    letter-spacing: 2px;
+    word-spacing: -5px;
+    /* white-space:nowrap */
+}
 /************** 2-3. 기사사진(+사진설명) **************/
+.afig{
+    margin: 15px 0;
+}
+
+.afig img{
+    width: 100%;
+}
+
+.afig figcaption{
+    background-color: bisque;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.afig small{
+    font-family: "함초롬돋움";
+    color: burlywood;
+}
+
+.atc{
+    font-family: "함초롬돋움";
+    font-size: 17px;
+    line-height: 1.56;
+}
+
+.atc strong{
+    font-family: "궁서";
+}
 /************** 2-4. 기사내용 **************/
+
+.quote{
+    background-color: rgba(140, 140, 140, 0.239);
+    padding: 10px;
+    
+}
+
+.quote h3{
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.quote blockquote{
+    font-size: 12px;
+    text-indent: 15px;
+    text-align: justify;
+    line-height: 1.7;
+}
+
 /************** 2-5. 기자소개 **************/
 /************** 2-6. 원본기사링크 **************/

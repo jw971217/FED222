@@ -97,6 +97,14 @@ https://www.w3schools.com/charsets/ref_html_utf8.asp */
     /* 블록요소 내부의 텍스트/인라인요소 중앙정렬 */
     text-align: center;
     /* tac */
+    box-sizing: border-box;
+    /* 일반적으로 블록박스에 크기를 주고, 보더와 패딩을 주게되면, 설정된 크기에 보더와 패딩이 포함된 크기로 박스가 커지게 됨. 이런 박스를 content-box라고 함.
+    
+    [box-sizing 속성으로 크기 유지하기!]
+    box-sizing: border-box
+    -> 박스 크기에 보더부터 패딩가지 모두 포함함
+    -> 결과적으로 크기가 커지지 않음. 설정된 크기가 유지됨.
+    기본값은 content-box -> 커지는 박스*/
 }
 
 /* 다중클래스 적용연습 */

@@ -5,6 +5,10 @@
     <title>네이버 요약뉴스 - IT/과학</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/sub.css" />
+    <style>
+        figure {background-color:lemonchiffon;}
+    </style>
+
     <!--
         link 요소
         - 외부 스타일시트 호출(익스터널방식:external)
@@ -18,7 +22,7 @@
     <!-- 1. 상단영역 -->
     <header id="top" class="ct">
         <!-- 1-1.제목 -->
-        <h1>네이버 요약뉴스 - IT/과학</h1>
+        <h1 style="font-family: 함초롬돋움">네이버 요약뉴스 - IT/과학</h1>
         <!-- 1-2.메뉴 -->
         <nav class="gnb">
             <a href="index.html">
@@ -56,7 +60,8 @@
             <p>네이버<sub>NAVER</sub>가 <em>코로나19<sub>COVID-19</sub><sup>ⓛ</sup>가 끝난 이후에도</em> 직원이 <b>근무 시간과 장소를 직접 선택</b>할 수 있도록 새로운 근무제인 <strong>'커넥티드 워크'</strong>를 도입한다. 사무실이나 자택, 외부공간
                 등 <strong>업무 장소와 근무 시간을 직원 자율에 전적으로 맡기는 제도</strong>다.</p>
 
-            <p><b>네이버</b>는 오는 7월부터 사무실 출근, 원격 근무 등 근무형태를 회사가 정하는 것이 아니라 직원들이 자유롭게 선택하는 새로운 근무제 <strong>'Connected Work'</strong>를 도입한다고 4일 밝혔다.
+            <p><b>네이버</b>는 오는 7월부터 사무실 출근, 원격 근무 등 근무형태를 회사가 정하는 것이 아니라 직원들이 자유롭게 선택하는 새로운 근무제 <strong>'Connected Work'</strong>를 도입한다고 4일 밝혔다.<br>
+
             </p>
 
             <p><b>네이버</b>는 <i>2014년부터 업무 시간을 직원 개인이 자율적으로 운영</i>할 수 있도록 한 것에 이어 이번 제도로 업무 공간에 대해서도 직원의 자율성을 대폭 확대해 네이버의 '자율', '책임',
@@ -75,14 +80,23 @@
             <p>또 네이버는 'Connected Work' 제도 하에서도 팀워크 강화, 신규입사자의 빠른 적응, 협업을 위해 대면 미팅이 필수적인 경우 등 오프라인 대면이 반드시 필요한 상황을 위한
                 가이드를 마련하는 등 개인의 업무 효율성을 높인다. 네이버의 문화를 공유하고 팀워크를 통한 시너지를 확대해나갈 수 있는 방안도 지원한다.</p>
 
-            <p>최수연<sup>②</sup> 네이버 대표는 "네이버는 '언제', '어디서' 일하는가를 따지기 보다는 더 본질적인 '일의 본연의 가치'에 집중, 신뢰 기반의 자율적인 문화와 최고의 성과를 만들어왔다"<ins>고 생각하지만 직원들의 생각은 다를 수 있다는 점을 강조하며</ins>"
-                "네이버만의 문화를 바탕으로 새로운 근무제를 도입하게 됐고, 앞으로도 '일의 본질'에 집중해 직원들이 최적의 환경에서 업무에 몰입할 수 있는 다양한 방안을 모색해나갈 것"이라고 말했다.
+            <p>최수연<sup>②</sup> 네이버 대표는 <q>네이버는 '언제', '어디서' 일하는가를 따지기 보다는 더 본질적인 '일의 본연의 가치'에 집중, 신뢰 기반의 자율적인 문화와 최고의 성과를 만들어왔다</q><ins>고 생각하지만 직원들의 생각은 다를 수 있다는 점을 강조하며</ins>"
+                <q>네이버만의 문화를 바탕으로 새로운 근무제를 도입하게 됐고, 앞으로도 '일의 본질'에 집중해 직원들이 최적의 환경에서 업무에 몰입할 수 있는 다양한 방안을 모색해나갈 것</q>이라고 말했다.
                 <br>
-                <del>네이버는 좋겠다! 나도 재택근무 하고 싶다.</del> 이상입니다.
+                <del>네이버는 좋겠다! 나도 재택근무 하고 싶다.</del> 
+                <bdo dir=rtl>다시 합창합시다</bdo><br>이상입니다.
             </p>
         </section>
         <!-- section요소 : 내용구분박스(div형제) -->
 
+        <!-- 인용구 설명 넣기 -->
+        <article class="quote" style="border:2px solid powderblue">
+            <h3 style="background-color: lemonchiffon;">재택근무란?</h3>
+            <blockquote cite="www.naver.com/">
+                근로자가 본인의 집에서 공간 제약 없이 정보 통신 기기를 이용하여 근무하는 노동형태이다. 
+                사업장으로의 출근을 상정하지 않고 근무하는 형태이기 때문에 본사와 연락 및 작업을 할 수 있는 기기와 연결망이 필수적으로 갖춰져야 한다는 점은 동일하지만 다른 근무 형태들이 그렇듯이 상세한 사항은 기업별로 매우 상이하다.
+            </blockquote>
+        </article>
         <!-- 주해글 넣기 -->
         <article class="desc">
             <h5> ▣ 주해: </h5>
@@ -101,7 +115,14 @@
                     서울대학교를 졸업하고 연세대 법전, 하버드 로스쿨을 졸업했다.
                 </small>
             </p>
+
         </article>
+
+        <figure class="scream">
+            <img src="work.jpg" alt="The Scream Not Loaded"><br>
+            <cite style="color:green"> The Scream </cite>
+            <figcaption>by Monk</figcaption>
+        </figure>
 
         <!-- 2-5. 기자소개 -->
         <div class="byrep">
@@ -109,7 +130,7 @@
         </div>
         <!-- 2-6. 원본기사링크 -->
         <div class="orga">
-            <a href="https://n.news.naver.com/mnews/article/008/0004741854?sid=105" target="_blank">원본기사</a>
+            <a href="https://n.news.naver.com/mnews/article/008/0004741854?sid=105" target="_blank;"ㅁ>원본기사</a>
         </div>
     </main>
     <!-- 3. 하단영역 -->
@@ -153,7 +174,34 @@
     -->
 
 
+    <!-- [HTML 인용요소] 
+    
+        1. 인용관련 요소
+        <blockquote> - Defines a section that is quoted from another source(블록 요소로 별도의 인용구를 구분하는 박스)
+            + 주의: p 요소 안에 사용하면 안 됨. p요소는 block 요소를 안에다 사용할 수 없도록 약속됨
+            + cite 속성: 어디서 인용했는지 표시 가능(출처 표시)
+        <q>	Defines a short inline quotation
+            직은 인용구(쌍따옴표 자돈 생산)
+        2. 줄임말 표시
+        <abbr>	Defines an abbreviation or acronym(줄임말 오버 시 툴팁표시)
+            + 필수송석은 title이 필요
+        
+        3. 주소 표시 
+        <address> Defines contact information for the author/owner of a document 
+                + 주소, 대표자,
+                전화번호 등 정보쇼피
+        
+        
+        4. 인용작품명
+        <cite>	Defines the title of a work)이미지나 인용된 부분의 실제 작품명을 표시)
 
+        5. 글자 역순표시(Bi-Directional Override)
+        <bdo> - Defines the text direction
+        dir = "rtl" -> right to left 즉, 오른족에서 왼쪽으로 글자표시
+        
+    
+    
+    -->
 
     <!-- 
             [ html 요소들 ]
