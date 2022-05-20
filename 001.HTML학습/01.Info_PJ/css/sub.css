@@ -27,3 +27,29 @@
 /************** 2-4. 기사내용 **************/
 /************** 2-5. 기자소개 **************/
 /************** 2-6. 원본기사링크 **************/
+
+/* 서브페이지 메인 컨텐츠 박스 */
+
+/* 메인 컨텐츠 공통 경계선 */
+#cont article{
+    border-top: 1px solid #ccc;
+    margin-top: 25px;
+
+    /* 
+    text-align-last: center;
+    background-color: #fdffbf;
+    background-clip: content-box;
+    padding: 20px; */
+
+}
+
+/* 분야별 주요뉴스에 가상요소로 아이콘 넣기 */
+.secnews dt::before{
+    content: '★';
+    color: blue;
+}
+
+.secnews dd::before{
+    content: '▷';
+    color: powderblue;
+}
