@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타벅스 연습</title>
+    <style>
+        body{
+            background: #000 url(./starbucks_img/reserve_bg.jpg) no-repeat top/100%;
+        }
+
+        /* 기본 박스 크기를 잡아줘야 함 */
+        #circle{
+            width: 334px;
+            height: 334px;
+            margin: 100px auto;
+        }
+        #circle img{
+            position: absolute;
+            left: 400px;
+            top: 100px;
+            width: 334px;
+            height:334px;
+        }
+        
+
+
+
+        #circle img:first-child{
+            transform: rotateY(0deg);
+        
+        }
+        #circle img:last-child{
+            transform: rotateY(90deg);
+         
+        }
+
+        #circle:hover img:first-child{
+            transform: rotateY(90deg);
+            transition: transform 1s ease-in;
+        }
+        #circle:hover img:last-child{
+            transform: rotateY(0deg);
+            transition: transform 1s ease-out 0.4s;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="circle">
+        <img src="./starbucks_img/reserve_medal01.png" alt="medal01">
+        <img src="./starbucks_img/reserve_medal02.png" alt="medal02">
+    </div>
+    
+</body>
+
+</html>

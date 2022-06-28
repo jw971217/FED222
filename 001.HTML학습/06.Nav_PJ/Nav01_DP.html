@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>유형1. 가로내비 서브별 드롭다운 세로형</title>
+    <style>
+        /* GNB 메뉴박스 */
+        html, body, ul, ol{
+            margin: 0;
+            padding: 0;
+        }
+        /* ul, ol 초기화 - 마진0, 패딩0, 리스트 스타일 없음 (앞의 두 개는 위에서 초기화 함)*/
+        ul, ol{
+            list-style:none;
+        }
+
+
+
+        .gnb{
+            background-color: rgb(95, 146, 246);
+        }
+
+        /* ul 초기화 */
+        .gnb ul{
+            /* 가로 크기: li 하나 200px * 4개 = 800px */
+            width: 800px;
+
+            /* 리스트박스 기본 3무 - 기본적으로, 초기화 시 3가지 초기화 */
+            margin: 0 auto;
+            /* 마영오 - 블록요소 가로 중앙정렬 */
+            
+        }
+        /* 가상 요소로 clear 설정하기 */
+        .gnb ul::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+      
+        /* li 하위 a 요소 */
+        .gnb>ul>li>a{
+            /* 글자색 */
+            color: #fff;
+            text-decoration: none;
+            font-size: 17px;
+
+            /* 디자인 적용 위해 블록 변경! */
+            display:block;
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            transition: all .3s;
+        }
+        /*부모 li에 마우스 오버시 상위메뉴 a요소 변경 */
+        .gnb>ul>li:hover>a {
+            background-color: rgb(195, 227, 255);
+            color: #000;
+        }
+
+        /* 본문내용 */
+        .cont{
+            background-color: rgb(255, 220, 220);
+            text-align: center;
+            line-height: 50;
+        }
+
+        /* 이렇게 하지 않으면, 다른 li도 모두 float가 되어서 ol>li의 아이들도 옆으로 나란히 나오게 됨 */
+        .gnb>ul>li{
+            float:left;
+            height: 50px;
+        }
+        
+        /* 서브메뉴 */
+        .smenu{
+            /* 트랜지션 없이 숨기기 */
+            display:none;
+            background-color: rgb(195, 227, 255);
+                 
+        }
+
+        /* 상위 메뉴 li에 마우스 오버 시 하위메뉴박스 트랜지션 없이 보이기 */
+        .gnb>ul>li:hover .smenu{
+            display:block;
+        }
+        
+        .gnb>ul>li:hover .smenu:nth-child(2){
+            height: 180px;
+        }
+        .gnb>ul>li:hover .smenu:nth-child(3){
+            height: 100px;
+        }
+        
+
+        /* 서브메뉴 a 요소 */
+        .smenu ol{
+            /* 왜 안쪽 박스에 패딩을 주었는가? 
+            - .smenu 박스는 높이값 0으로 자식요소를 숨기기할 박스이므로, 패딩이 있으면 높이값 0이어도 패딩 때문에 숨겨지지 않는다! 따라서 안쪽 박스에 패딩 설정을 해야 한다.*/
+
+            padding: 10px;
+        }
+        .smenu a{
+            /* 글자색 */
+            color: darkblue;
+            /* 밑줄 없앰 */
+            text-decoration: none;
+            display: block; /* 블록변경  */
+            text-align: center;
+            font-size: 14px;
+            line-height: 40px;
+            transition: .3s;
+            background-color: rgb(195, 227, 255);
+            
+        }
+        /*  */
+        .smenu a:hover{
+            background-color: #ececec;
+            color: orangered;
+            transition: all .3s ease-out;
+        
+        }
+
+        /* 두 번쨰 메뉴  */
+
+    </style>
+</head>
+
+
+
+<body>
+    <h1>유형1. 가로내비 서브별 드롭다운 세로형</h1>
+    <!-- GNB 네비게이션 -->
+    <nav class="gnb">
+        <ul>
+            <li>
+                <a href="">Home</a>    
+            </li>
+
+            <li>
+                <a href="#">웹개발</a>
+                <!-- 서브메뉴 -->    
+                <div class="smenu">
+                    <ol>
+                        <li>
+                            <a href="#">웹디자인</a>
+                        </li>
+                        <li>
+                            <a href="#">HTML5+CSS3</a>
+                        </li>
+                        <li>
+                            <a href="#">jQuery</a>
+                        </li>
+                        <li>
+                            <a href="#">웹+모바일</a>
+                        </li>
+                    </ol>
+                </div>
+            </li>
+
+            <li>
+                <a href="#">게시판</a>    
+                <!-- 서브메뉴 -->    
+                <div class="smenu">
+                    <ol>
+                        <li>
+                            <a href="#">Q&amp;A</a>
+                            <!-- HTML 특수문자처리: 
+                                &(엔퍼센트) &amp;
+                                여는 꺽쇠(<) &alt;
+                                닫는 꺽쇠(>) &gt;
+                                 -->
+                        </li>
+                        <li>
+                            <a href="#">방명록</a>
+                        </li>
+                        
+                    </ol>
+                </div>
+            </li>
+
+            <li>
+                <a href="">프로필</a>    
+            </li>
+        </ul>
+    </nav>
+
+    <!-- 내용박스 -->
+    <div class="cont">
+        본문내용
+    </div>
+</body>
+</html>
